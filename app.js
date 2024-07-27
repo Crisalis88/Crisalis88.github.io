@@ -15,6 +15,12 @@ const price = document.querySelector('.price');
 
 let item = 'Test';
 
+if (typeof tg !== 'undefined' && tg.sendData) {
+    tg.sendData(item);
+} else {
+    console.error('tg.sendData не определена или tg не существует');
+}
+
 btn.addEventListener('click', () => {
     item += name1.value + '  ' + aboba.value + '  ' + price.value;
     console.log("Отправляемые данные:", item);
