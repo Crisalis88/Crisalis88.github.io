@@ -6,18 +6,18 @@ body{
     display: flex;
     flex-direction: column;
     margin:0 auto;
-    margin-top:200px;
+    margin-top:160px;
 }
 .f input{
     border-radius: 1em;
     display: block;
-    width: 250px;
-    height:40px;
+    width: 260px;
+    height:50px;
 }
 
 .f textarea{
     border-radius: 1em;
     display: block;
-    height:100px;
-    width: 250px;
+    height:140px;
+    width: 260px;
 }
