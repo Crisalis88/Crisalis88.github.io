@@ -16,7 +16,7 @@ const price = document.querySelector('.price');
 let item = 'Test';
 
 btn.addEventListener('click', () => {
-    item = name1.value + '  ' + aboba.value + '  ' + price.value;
+    item += name1.value + '  ' + aboba.value + '  ' + price.value;
     console.log("Отправляемые данные:", item);
     alert(item)
     tg.sendData(item);
