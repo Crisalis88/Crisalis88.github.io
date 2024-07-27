@@ -17,6 +17,7 @@ let item = '';
 
 btn.addEventListener('click', () => {
     item = name1.value + '  ' + aboba.value + '  ' + price.value;
+    tg.sendData(item);
 });
 
 Telegram.WebApp.onEvent('MainButtonCliked', () => {
