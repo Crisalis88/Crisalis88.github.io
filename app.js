@@ -13,10 +13,11 @@ const aboba = document.querySelector('.aboba');
 const price = document.querySelector('.price');
 
 
-let item = '';
+let item = 'Test';
 
 btn.addEventListener('click', () => {
     item = name1.value + '  ' + aboba.value + '  ' + price.value;
+    console.log("Отправляемые данные:", item);
     alert(item)
     tg.sendData(item);
 });
