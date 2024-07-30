@@ -178,7 +178,7 @@ header .title div {
     transform: translate(0px,0px);
   }
 	50%{
-		transform: translate(0px,-10px);
+		transform: translate(0px,-4px);
 	}
   100%{
     transform: translate(0px, 0px);
@@ -327,6 +327,8 @@ let count = parseInt(localStorage.getItem('count_')) || 0; // Получаем c
         circle.style.transform = 'translate(24px, 0px)'
         header.style.background = 'rgb(35, 35, 35)';
         money.style.color = 'white';
+
+	img.style.boxShadow = '0px 0px 10px yellow';
 
         
       }
