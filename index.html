@@ -66,6 +66,8 @@
     box-shadow: 0px 0px 5px #000000;
     border-radius: 7em;
     width: 207px;
+	    animation-name: buttonAn;
+  animation-duration: .1s;
   }
 
   .row{
@@ -171,8 +173,11 @@ header .title div {
 }
 @keyframes buttonAn {
   0%{
-    transform: translate(0px,900px);
+    transform: translate(0px,0px);
   }
+	50%{
+		transform: translate(0px,-20px);
+	}
   100%{
     transform: translate(0px, 0px);
   }
