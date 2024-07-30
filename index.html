@@ -178,7 +178,7 @@ header .title div {
     transform: translate(0px,0px);
   }
 	50%{
-		transform: translate(0px,-20px);
+		transform: translate(0px,-10px);
 	}
   100%{
     transform: translate(0px, 0px);
@@ -319,7 +319,7 @@ header .start:hover{
     
     let switchCheck = true
 
-    let speed = 1;
+    let speed = localStorage.getItem('spd');;
     
     switcher.addEventListener('click', () => {
       if(switchCheck){
@@ -327,14 +327,12 @@ header .start:hover{
         header.style.background = 'rgb(35, 35, 35)';
         money.style.color = 'white';
 
-	img.classList.add('imgAn');
         
       }
       else{
         circle.style.transform = 'translate(0px, 0px)'
         header.style.background = '#fcff97';
         money.style.color = 'black';
-	      img.classList.remove('imgAn');
       }
       switchCheck = !switchCheck
     })
@@ -351,29 +349,38 @@ lvl1.addEventListener('click',() => {
   count -= 90;
   speed += 1;
 	 localStorage.setItem('count_', count);
+	localStorage.setItem('spd', speed);
 })
 lvl2.addEventListener('click',() => {
   count -= 220;
 	speed += 3;
 	 localStorage.setItem('count_', count);
+	localStorage.setItem('spd', speed);
 })
 
 lvl3.addEventListener('click',() => {
   count -= 470;
 	speed += 5;
 	 localStorage.setItem('count_', count);
+	localStorage.setItem('spd', speed);
 })
 
 lvl4.addEventListener('click',() => {
   count -= 980;
 speed += 10;
 	 localStorage.setItem('count_', count);
+	localStorage.setItem('spd', speed);
 })
 
 
 
 
 img.addEventListener('click', () => {
+	img.classList.add('imgAn');
+	setTimeout(() => {
+	img.classList.remove('imgAn');
+
+}, 90)
   count += speed;
   localStorage.setItem('count_', count);
   money.innerHTML = '$' + localStorage.getItem('count_');
