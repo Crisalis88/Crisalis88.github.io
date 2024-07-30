@@ -366,7 +366,6 @@ speed += 10;
 img.addEventListener('click', () => {
   count += speed;
   localStorage.setItem('count_', count);
-  localStorage.clear();
   money.innerHTML = '$' + localStorage.getItem('count_');
 
 })
