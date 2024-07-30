@@ -134,9 +134,9 @@ header {
   0%{
     transform: translate(0px,0px);
   }
-	50%{
-		transform: translate(0px,-2px);
-	}
+50%{
+	transform: translate(0px,-2px);
+}
   100%{
     transform: translate(0px, 0px);
   }
@@ -173,7 +173,6 @@ let count = parseInt(localStorage.getItem('count_')) || 0; // Получаем c
         circle.style.transform = 'translate(24px, 0px)'
         header.style.background = 'rgb(35, 35, 35)';
         money.style.color = 'white';
-
 	img.style.boxShadow = '0px 0px 22px 3px yellow';
 
         
@@ -182,7 +181,7 @@ let count = parseInt(localStorage.getItem('count_')) || 0; // Получаем c
         circle.style.transform = 'translate(0px, 0px)'
         header.style.background = '#fcff97';
         money.style.color = 'black';
-	img.style.boxShadow = '0px 0px 5px #000000';
+	img.style.boxShadow = '0px 0px 5px 1px #000000';
       }
       switchCheck = !switchCheck
     })
@@ -230,7 +229,7 @@ img.addEventListener('click', () => {
 }, 90)
   count += speed;
   localStorage.setItem('count_', count);
-  money.innerHTML = '$' + localStorage.getItem('count_');
+  money.innerHTML = '$' + count;
 
 })
 
