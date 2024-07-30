@@ -122,35 +122,6 @@
 }
 
 
-header {
-  background: #ffe389;
-  font-family: "Silkscreen";
-  height:140vh;
-  width: 100%;
-}
-header .title {
-  font-size: 63px;
-  font-family: "Silkscreen";
-  font-weight: 400;
-  background: rgb(199, 3, 101);
-  background: linear-gradient(90deg, rgba(255, 35, 145, 0.795) 35%, rgba(15, 255, 226, 0.8897759788) 91%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-align: center;
-  line-height: 108%;
-  animation-name: titleAn;
-  animation-duration: 3.2s;
-}
-header .title div {
-  font-size: 62px;
-}
-
-
-.counter{
-  animation-name: counterAn;
-  animation-duration: .06;
-}
 
 @keyframes titleAn {
   0%{
@@ -162,17 +133,7 @@ header .title div {
 }
 	
 
-@keyframes counterAn{
-  0%{
-    transform:scale(1)
-  }
-  60%{
-  transform:scale(1.088)
-  }
-  100%{
-    transform:scale(1)
-  }
-}
+
 @keyframes buttonAn {
   0%{
     transform: translate(0px,0px);
@@ -185,22 +146,6 @@ header .title div {
   }
 }
 
-header .start {
-  background: rgb(150, 255, 232);
-  font-size: 30px;
-  text-align: center;
-  padding:7px;
-  padding-block: 8px;
-  width: 50%;
-  border-radius: 1em;
-  text-align: center;
-  margin-top: 110px;
-  margin: 0 auto;
-  transition: all 0.04s;
-  animation-name:aboba, buttonAn;
-  animation-duration: 14s, 2.7s;
-  animation-iteration-count: infinite, 1;
-}
 
 header .start:active{
   color:white;
@@ -285,20 +230,7 @@ header .start:hover{
   }
 }
 
-@keyframes scoresAn{
-  0%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-}
 
-.scoresAn{
-  animation-name:scoresAn;
-  animation-duration: .4s;
-  color:rgb(35, 35, 35)
-}
 
 	</style>
 
@@ -342,8 +274,6 @@ let count = parseInt(localStorage.getItem('count_')) || 0; // Получаем c
 
 
 let click = 0;
-
-arr = [];
 
 let level = localStorage.getItem('level_');
 
