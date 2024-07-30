@@ -319,7 +319,8 @@ header .start:hover{
     
     let switchCheck = true
 
-    let speed = localStorage.getItem('spd');;
+    let speed = parseInt(localStorage.getItem('spd')) || 0; // Получаем speed и конвертируем в число
+let count = parseInt(localStorage.getItem('count_')) || 0; // Получаем count и конвертируем в число
     
     switcher.addEventListener('click', () => {
       if(switchCheck){
@@ -342,7 +343,6 @@ let click = 0;
 
 arr = [];
 
-let count = localStorage.getItem('count_');
 let level = localStorage.getItem('level_');
 
 lvl1.addEventListener('click',() => {
