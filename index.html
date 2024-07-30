@@ -340,27 +340,32 @@ let level = localStorage.getItem('level_');
 lvl1.addEventListener('click',() => {
   count -= 100;
   speed += 1;
+	 localStorage.setItem('count_', count);
 })
 lvl2.addEventListener('click',() => {
   count -= 220;
 	speed += 3;
+	 localStorage.setItem('count_', count);
 })
 
 lvl3.addEventListener('click',() => {
   count -= 470;
 	speed += 5;
+	 localStorage.setItem('count_', count);
 })
 
 lvl4.addEventListener('click',() => {
   count -= 980;
 speed += 10;
+	 localStorage.setItem('count_', count);
 })
 
 
 
 
 img.addEventListener('click', () => {
-  parseInt(localStorage.setItem('count_', count += parseInt(speed));
+  count += speed;
+  localStorage.setItem('count_', count);
   money.innerHTML = '$' + localStorage.getItem('count_');
 
 })
