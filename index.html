@@ -60,6 +60,8 @@
 
 	<style>
 		@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+		 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
   .img{
@@ -83,10 +85,13 @@
       transform: scale(1.04);
   }
 header {
-  background: #fcff97;
-  font-family: "Silkscreen";
-  height:140vh;
+    background: #ff6e6e;
+  font-family: "Ubuntu";
+  font-weight: 800;
+  height:100vh;
   width: 100%;
+  background: rgb(255,48,199);
+background: linear-gradient(320deg, rgba(255,48,199,0.7525210767900911) 24%, rgba(15,255,226,0.8897759787508753) 80%); 
 }
 
   .aboba{
@@ -95,15 +100,23 @@ header {
     
   }
   .card{
+        font-family:'Kanit';
     transition: all .11s;
+    border:2px solid aqua;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    color:rgb(255, 255, 255);
+    text-shadow:1px 1px 1px black;
   }
   .card:active{
     transform: scale(1.1);
   }
   .money{
-    position: absolute;
+      position: absolute;
     font-size: 28px;
     top:39px;
+    color:rgb(255, 255, 255);
+    text-shadow:1px 1px 1px black;
   }
 .switcher{
   position: absolute;
@@ -160,6 +173,7 @@ header {
     const money = document.querySelector('.money');
     const img = document.querySelector('img');
     const level__ = document.querySelector('.level');
+    const cards = document.querySelectorAll('.card')
 
     const lvl1 = document.querySelector('.lvl1')
     const lvl2 = document.querySelector('.lvl2')
@@ -178,12 +192,16 @@ let count = parseInt(localStorage.getItem('count_')) || 0; // Получаем c
         money.style.color = 'white';
 	img.style.boxShadow = '0px 0px 18px 1px yellow';
 
+	cards.forEach(element => {
+          element.style.color = 'aqua'
+        });
         
       }
       else{
         circle.style.transform = 'translate(0px, 0px)'
-        header.style.background = '#fcff97';
-        money.style.color = 'black';
+                header.style.background ='rgb(255,48,199)';
+        header.style.background = 'linear-gradient(320deg, rgba(255,48,199,0.7525210767900911) 45%, rgba(15,255,226,0.8897759787508753) 95%)'; 
+        money.style.color = 'white';
 	img.style.boxShadow = '0px 0px 5px 1px #000000';
       }
       switchCheck = !switchCheck
