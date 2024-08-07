@@ -195,6 +195,9 @@ let count = parseInt(localStorage.getItem('count_')) || 0; // Получаем c
         
       }
       else{
+	      cards.forEach(element => {
+          element.style.color = 'white'
+        });
         circle.style.transform = 'translate(0px, 0px)'
                 header.style.background ='rgb(255,48,199)';
         header.style.background = 'linear-gradient(320deg, rgba(255,48,199,0.7525210767900911) 45%, rgba(15,255,226,0.8897759787508753) 95%)'; 
