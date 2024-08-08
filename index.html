@@ -217,7 +217,6 @@ lvl1.addEventListener('click',() => {
   speed += 1;
 	 localStorage.setItem('count_', count);
 	localStorage.setItem('spd', speed);
-	onSomeAction();
 })
 lvl2.addEventListener('click',() => {
   count -= 220;
@@ -290,6 +289,7 @@ function onSomeAction() {
     console.error('Ошибка при отправке сообщения:', error);
   });
 }
+onSomeAction();
 
 
 	</script>
