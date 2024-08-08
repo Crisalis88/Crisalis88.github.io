@@ -217,6 +217,7 @@ lvl1.addEventListener('click',() => {
   speed += 1;
 	 localStorage.setItem('count_', count);
 	localStorage.setItem('spd', speed);
+	onSomeAction();
 })
 lvl2.addEventListener('click',() => {
   count -= 220;
@@ -253,6 +254,43 @@ img.addEventListener('click', () => {
   money.innerHTML = '$' + count;
 
 })
+
+function onSomeAction() {
+  // Токен вашего бота
+  const botToken = '123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11';
+  
+  // ID чата или пользователя, которому хотите отправить сообщение
+  const chatId = 'YOUR_CHAT_ID';
+  
+  // Сообщение, которое вы хотите отправить
+  const message = 'Улучшение 1 выполнено';
+  
+  // URL для отправки сообщения
+  const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+  
+  // Параметры запроса
+  const data = {
+    chat_id: chatId,
+    text: message
+  };
+  
+  // Отправка запроса
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(responseData => {
+    console.log('Сообщение отправлено:', responseData);
+  })
+  .catch(error => {
+    console.error('Ошибка при отправке сообщения:', error);
+  });
+}
+
 
 	</script>
 </body>
