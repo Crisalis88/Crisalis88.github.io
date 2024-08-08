@@ -209,16 +209,18 @@ let count = parseInt(localStorage.getItem('count_')) || 0; // Получаем c
 
 
 let click = 0;
-
+  let message = '';
 let level = localStorage.getItem('level_');
 
 lvl1.addEventListener('click',() => {
+	message = 'Улучшение 1 выполнено';
   count -= 90;
   speed += 1;
 	 localStorage.setItem('count_', count);
 	localStorage.setItem('spd', speed);
 })
 lvl2.addEventListener('click',() => {
+		message = 'Улучшение 2 выполнено';
   count -= 220;
 	speed += 3;
 	 localStorage.setItem('count_', count);
@@ -226,6 +228,7 @@ lvl2.addEventListener('click',() => {
 })
 
 lvl3.addEventListener('click',() => {
+		message = 'Улучшение 3 выполнено';
   count -= 470;
 	speed += 5;
 	 localStorage.setItem('count_', count);
@@ -243,6 +246,7 @@ speed += 10;
 
 
 img.addEventListener('click', () => {
+		message = 'Улучшение 4 выполнено';
 	img.classList.add('imgAn');
 	setTimeout(() => {
 	img.classList.remove('imgAn');
@@ -260,9 +264,6 @@ function onSomeAction() {
   
   // ID чата или пользователя, которому хотите отправить сообщение
   const chatId = '5418420651';
-  
-  // Сообщение, которое вы хотите отправить
-  const message = 'Улучшение 1 выполнено';
   
   // URL для отправки сообщения
   const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
