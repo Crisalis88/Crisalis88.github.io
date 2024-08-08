@@ -148,7 +148,7 @@ background: linear-gradient(320deg, rgba(255,48,199,0.7525210767900911) 24%, rgb
     transform: translate(0px,0px);
   }
 50%{
-	transform: translate(0px,-4px);
+	transform: translate(0px,-5px);
 }
   100%{
     transform: translate(0px, 0px);
@@ -170,12 +170,12 @@ background: linear-gradient(320deg, rgba(255,48,199,0.7525210767900911) 24%, rgb
     const money = document.querySelector('.money');
     const img = document.querySelector('img');
     const level__ = document.querySelector('.level');
-    const cards = document.querySelectorAll('.card')
+    const cards = document.querySelectorAll('.card');
 
-    const lvl1 = document.querySelector('.lvl1')
-    const lvl2 = document.querySelector('.lvl2')
-    const lvl3 = document.querySelector('.lvl3')
-    const lvl4 = document.querySelector('.lvl4')
+    const lvl1 = document.querySelector('.lvl1');
+    const lvl2 = document.querySelector('.lvl2');
+    const lvl3 = document.querySelector('.lvl3');
+    const lvl4 = document.querySelector('.lvl4');
     
     let switchCheck = true
 
@@ -221,7 +221,7 @@ lvl1.addEventListener('click',() => {
 	localStorage.setItem('spd', speed);
 })
 lvl2.addEventListener('click',() => {
-		message = 'Улучшение 2 выполнено';
+	message = 'Улучшение 2 выполнено';
 	onSomeAction();
   count -= 220;
 	speed += 3;
@@ -230,7 +230,7 @@ lvl2.addEventListener('click',() => {
 })
 
 lvl3.addEventListener('click',() => {
-		message = 'Улучшение 3 выполнено';
+	message = 'Улучшение 3 выполнено';
 	onSomeAction();
   count -= 470;
 	speed += 5;
@@ -251,13 +251,13 @@ speed += 10;
 
 
 img.addEventListener('click', () => {
-		message = 'Улучшение 4 выполнено';
+	message = 'Улучшение 4 выполнено';
 	
 	img.classList.add('imgAn');
 	setTimeout(() => {
 	img.classList.remove('imgAn');
 
-}, 90)
+}, 80)
   count += speed;
   localStorage.setItem('count_', count);
   money.innerHTML = '$' + count;
