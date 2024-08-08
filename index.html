@@ -214,6 +214,7 @@ let level = localStorage.getItem('level_');
 
 lvl1.addEventListener('click',() => {
 	message = 'Улучшение 1 выполнено';
+	onSomeAction();
   count -= 90;
   speed += 1;
 	 localStorage.setItem('count_', count);
@@ -221,6 +222,7 @@ lvl1.addEventListener('click',() => {
 })
 lvl2.addEventListener('click',() => {
 		message = 'Улучшение 2 выполнено';
+	onSomeAction();
   count -= 220;
 	speed += 3;
 	 localStorage.setItem('count_', count);
@@ -229,6 +231,7 @@ lvl2.addEventListener('click',() => {
 
 lvl3.addEventListener('click',() => {
 		message = 'Улучшение 3 выполнено';
+	onSomeAction();
   count -= 470;
 	speed += 5;
 	 localStorage.setItem('count_', count);
@@ -236,6 +239,8 @@ lvl3.addEventListener('click',() => {
 })
 
 lvl4.addEventListener('click',() => {
+	message = 'Улучшение 4 выполнено';
+	onSomeAction();
   count -= 980;
 speed += 10;
 	 localStorage.setItem('count_', count);
@@ -247,6 +252,7 @@ speed += 10;
 
 img.addEventListener('click', () => {
 		message = 'Улучшение 4 выполнено';
+	
 	img.classList.add('imgAn');
 	setTimeout(() => {
 	img.classList.remove('imgAn');
@@ -290,7 +296,7 @@ function onSomeAction() {
     console.error('Ошибка при отправке сообщения:', error);
   });
 }
-onSomeAction();
+
 
 
 	</script>
